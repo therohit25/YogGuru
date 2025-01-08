@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* .height-contact-100 {
+            height: 65vh;
+
+
+        } */
+
+.make-heading {
+  font-weight: bold;
+  font-size: 2rem;
+}

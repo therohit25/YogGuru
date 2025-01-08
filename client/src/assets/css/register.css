@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.heightweight100 {
+  height: 100vh;
+  width: 100vw;
+}
+
+.register-box {
+  width: 30vw;
+  background: url("../reg2.png"),
+    linear-gradient(43deg, blue 0%, #fff 56%, #c850c0 100%);
+  filter: drop-shadow(2px 1px 2px rgb(98, 170, 221));
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  filter: drop-shadow(2px 1px 2px rgb(98, 170, 221));
+}
+.inputField {
+  border: none;
+  background-color: #fff !important;
+  border-radius: 50px;
+  box-shadow: 1px 1px 2px #c850c0;
+
+  position: relative;
+  padding: 4%;
+}
+
+.inputField:focus {
+  outline: none;
+
+  box-shadow: 1px 1px 1px 1px;
+}

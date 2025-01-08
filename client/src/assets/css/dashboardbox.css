@@ -1,0 +1,10 @@
+.dashboard-box {
+  background: linear-gradient(
+    45deg,
+    hsl(229, 86%, 80%) 51%,
+    hsl(229, 90%, 77%) 51%,
+    hwb(229 56% 2%) 51%
+  );
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 3%;
+}

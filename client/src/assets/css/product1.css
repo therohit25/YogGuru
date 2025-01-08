@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.make-heading {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.make-semiheading {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.product-info {
+  /* border: 1px solid rgb(114, 114, 163); */
+  margin-top: 2%;
+  /* filter: drop-shadow(2px 2px 2px rgb(228, 213, 213)); */
+  /* box-shadow: 2px 2px 2px 2px; */
+}
+
+/* .imgheight {
+            height: 25vh;
+            width: 30vw;
+        } */
+
+.product-info:active,
+.product-info:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 1px 2px rgb(98, 170, 221));
+  /* filter: drop-shadow(1px 1px 1px 1px blanditiis, 0); */
+
+  background: linear-gradient(rgb(253, 252, 252), rgb(247, 245, 245));
+  transition: all 0.2s ease-in-out;
+  /* filter: drop-shadow(2px 2px 2px #fff); */
+  /* transform: translateY(-2%); */
+  transform: scale(0.9);
+}
+.imgheight {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 30dvw;
+}
+.searchico {
+  top: 8px;
+  right: 13px;
+}
+/* .productCardColour {
+  background: linear-gradient(
+    45deg,
+    hsl(229, 44%, 73%) 51%,
+    hsl(211, 40%, 73%) 51%,
+    hwb(211 61% 9%) 51%
+  );
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  animation: moveLine 3s linear infinite;
+} */
+.productCardColour:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(229, 44%, 73%) 51%,
+    hsl(211, 40%, 73%) 51%,
+    hwb(211 61% 9%) 51%
+  );
+  box-shadow: rgba(250, 241, 241, 0.2) 3px 2px 8px 0px;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 576px) {
+  .imgheight {
+    width: 100%;
+  }
+}

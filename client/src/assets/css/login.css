@@ -1,0 +1,45 @@
+.heightweight100 {
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-box {
+  /* background: url("../images/yogacart.png"), */
+  background: url("../reg2.png"),
+    linear-gradient(43deg, blue 0%, #fff 56%, #c850c0 100%);
+  filter: drop-shadow(2px 1px 2px rgb(98, 170, 221));
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  /* animation: animateupdown ease-in-out infinite; */
+}
+#dot {
+  width: 10px;
+  height: 2px;
+  background-color: black;
+  animation: animate 1s 1s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100px);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+/* .inputField {
+  border: none;
+  background-color: rgb(250, 238, 234);
+  box-shadow: 1px 1px 2px #c850c0;
+  padding: 4%;
+}
+.inputField:focus {
+  outline: none;
+ 
+  box-shadow: 1px 1px 1px 1px;
+} */

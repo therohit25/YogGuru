@@ -1,0 +1,51 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-attachment: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 50px;
+}
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 1%;
+  border: none;
+  cursor: pointer;
+}
+input[type="file"]::-webkit-file-upload-button:hover,
+input[type="file"]::-webkit-file-upload-button:active {
+  background-color: #2980b9;
+}
+.BlueGradientBackColour {
+  /* background: linear-gradient(
+    45deg,
+    hsl(229, 86%, 80%) 51%,
+    hsl(229, 90%, 77%) 51%,
+    hwb(229 56% 2%) 51%
+  ); */
+  background: linear-gradient(
+    45deg,
+    hsl(229, 86%, 80%) 51%,
+    hsl(229, 90%, 77%) 51%,
+    hwb(229 56% 2%) 51%
+  );
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

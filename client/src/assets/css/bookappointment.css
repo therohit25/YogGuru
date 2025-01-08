@@ -1,0 +1,24 @@
+.BookAppointmentClass {
+  background: linear-gradient(
+    45deg,
+    hsl(229, 86%, 80%) 51%,
+    hsl(211.29deg 100% 50%) 51%,
+    hwb(211.29deg 0% 0%) 51%
+  );
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.BookAppointmentClass:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 1px 2px rgb(98, 170, 221));
+  /* filter: drop-shadow(1px 1px 1px 1px blanditiis, 0); */
+
+  background: linear-gradient(
+    45deg,
+    hsl(211.29deg 100% 50%) 51%,
+    hwb(211.29deg 0% 0%) 51% hsl(229, 86%, 80%) 51%
+  );
+  transition: 0.5s all;
+  /* filter: drop-shadow(2px 2px 2px #fff); */
+  /* transform: translateY(-2%); */
+  transform: scale(0.9);
+}

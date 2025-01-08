@@ -1,0 +1,19 @@
+.Orderimage {
+  aspect-ratio: 1/1;
+  image-rendering: optimizeQuality;
+  flex-basis: content;
+  object-fit: cover;
+  width: 100%;
+}
+
+.totalPrice {
+  font-family: fantasy;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  padding: 2%;
+}
+.ordercard:hover,
+.ordercard:active {
+  scale: 0.9;
+  transition: 0.2s ease-in;
+}
