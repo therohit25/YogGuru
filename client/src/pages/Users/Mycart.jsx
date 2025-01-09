@@ -24,7 +24,7 @@ const Mycart = () => {
       await loadStripe(import.meta.env.VITE_STRIPE_PAYMENT_URL);
 
       const session = await axios.post(
-        "http://localhost:3004/user/OnlineOrder",
+        "https://yogguru-backend.onrender.com/user/OnlineOrder",
         {
           cart,
         }
@@ -142,7 +142,7 @@ const Mycart = () => {
                   <div className="d-flex flex-column  flex-sm-row gap-sm-3 align-items-center w-100 ">
                     <div className="w-100 prodimgwidth">
                       <img
-                        src={`http://localhost:3004/images/${item?.ProductDet?.ProductImg}`}
+                        src={`https://yogguru-backend.onrender.com/images/${item?.ProductDet?.ProductImg}`}
                         className="w-100 rounded-3"
                         alt=""
                         srcSet=""

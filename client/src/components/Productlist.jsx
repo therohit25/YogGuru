@@ -18,8 +18,8 @@ const Productlist = (props) => {
         >
           <div className="w-100 card-img-top">
             <img
-              src={`http://localhost:3004/images/${props.Img}`}
-              // src={`http://localhost:3004/images/${props.proddet.ProductImg}`}
+              src={`https://yogguru-backend.onrender.com/images/${props.Img}`}
+              // src={`https://yogguru-backend.onrender.com/images/${props.proddet.ProductImg}`}
               alt=""
               srcSet=""
               className="w-100 rounded "

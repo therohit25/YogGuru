@@ -1,4 +1,4 @@
-import OrderCard from "../../Components/OrderCard";
+import OrderCard from "../../components/OrderCard";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -13,7 +13,7 @@ const Parorder = () => {
     (async () => {
       try {
         const result = await axios.post(
-          "http://localhost:3004/admin/viewOrder",
+          "https://yogguru-backend.onrender.com/admin/viewOrder",
           {
             OrderId: OrderId,
           }

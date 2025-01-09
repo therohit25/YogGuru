@@ -117,7 +117,7 @@ const Table = ({
                                             <img
                                               style={{ aspectRatio: "1/1" }}
                                               className="w-100"
-                                              src={`http://localhost:3004/${imgUrl}/${data}`}
+                                              src={`https://yogguru-backend.onrender.com/${imgUrl}/${data}`}
                                               alt={data}
                                             />
                                           </div>

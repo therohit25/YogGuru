@@ -52,7 +52,7 @@ const Form = () => {
       body.mode = mode;
     }
     axios
-      .post("http://localhost:3004/register", body)
+      .post("https://yogguru-backend.onrender.com/register", body)
       .then((res) => {
         if (role === "Trainer") {
           setUid(res.data.uid);

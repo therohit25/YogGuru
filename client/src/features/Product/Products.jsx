@@ -34,7 +34,9 @@ const FetchProductDet = createAsyncThunk(
     try {
       let products = getItem("products");
       if (!products) {
-        const result = await axios.get("http://localhost:3004/products");
+        const result = await axios.get(
+          "https://yogguru-backend.onrender.com/products"
+        );
         setItem("products", result.data);
         return result.data;
       }

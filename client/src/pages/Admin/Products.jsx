@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import Table from "../../Components/Table";
+import Table from "../../components/Table";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
@@ -8,7 +8,9 @@ const Products = () => {
   const [productdata, setProductData] = useState(null);
   const FetchProducts = async () => {
     try {
-      const result = await axios.get("http://localhost:3004/products");
+      const result = await axios.get(
+        "https://yogguru-backend.onrender.com/products"
+      );
       setProductData(result.data);
     } catch (error) {
       console.error(`Error in fetching products for Admin : ${error?.message}`);
@@ -18,7 +20,7 @@ const Products = () => {
   const UpdateQuantity = async (Quantity, ProductId) => {
     try {
       const result = await axios.post(
-        "http://localhost:3004/admin/updatequantity",
+        "https://yogguru-backend.onrender.com/admin/updatequantity",
         {
           Quantity: Quantity,
           ProductId: ProductId,
@@ -36,9 +38,12 @@ const Products = () => {
   };
   const DeleteProduct = async (ProductId) => {
     try {
-      await axios.delete("http://localhost:3004/admin/deleteProduct", {
-        data: { ProductId: ProductId },
-      });
+      await axios.delete(
+        "https://yogguru-backend.onrender.com/admin/deleteProduct",
+        {
+          data: { ProductId: ProductId },
+        }
+      );
 
       FetchProducts();
     } catch (error) {

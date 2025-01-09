@@ -28,7 +28,10 @@ const Profile = () => {
     if (enableedit) {
       //Update Personal Info Code
       try {
-        axios.put("http://localhost:3004/user/updateProfile", userinfo);
+        axios.put(
+          "https://yogguru-backend.onrender.com/user/updateProfile",
+          userinfo
+        );
         dispatch(login(userinfo));
       } catch (e) {
         console.error(`Error in Upading User Profile : ${e?.message}`);
@@ -79,7 +82,7 @@ const Profile = () => {
                   {userdetails?.Role === "Trainer" ? (
                     <>
                       <img
-                        src={`http://localhost:3004/images/profimg.png`}
+                        src={`https://yogguru-backend.onrender.com/images/profimg.png`}
                         alt=""
                         style={{ aspectRatio: 1 / 1 }}
                         className="w-25 rounded-5"

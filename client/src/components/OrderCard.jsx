@@ -33,7 +33,7 @@ function OrderCard(props) {
                   <div className="row w-100">
                     <div className="col-md-4 mt-2">
                       <img
-                        src={`http://localhost:3004/images/${order.ProductDet.ProductImg}`}
+                        src={`https://yogguru-backend.onrender.com/images/${order.ProductDet.ProductImg}`}
                         className="img-fluid rounded-start Orderimage"
                         alt="Card title"
                       />

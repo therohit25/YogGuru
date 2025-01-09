@@ -4,7 +4,7 @@ import "../../assets/css/font.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../assets/css/register.css";
-import Form from "../../Components/Form";
+import Form from "../../components/Form";
 const Register = () => {
   return (
     <div

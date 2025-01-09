@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Productlist from "../../Components/Productlist";
+import Productlist from "../../components/Productlist";
 import "../../assets/css/bookappointment.css";
 import { SyncLoader } from "react-spinners";
 import { useSelector } from "react-redux";
@@ -11,7 +11,9 @@ const BookAppoinments = () => {
 
   const fetchTrainers = async () => {
     try {
-      const result = await axios.get("http://localhost:3004/yoga/getTrainers");
+      const result = await axios.get(
+        "https://yogguru-backend.onrender.com/yoga/getTrainers"
+      );
 
       setTrainers(result.data);
     } catch (error) {
@@ -28,7 +30,7 @@ const BookAppoinments = () => {
         window.location.href = "http://localhost:5173/Room/" + Trainer;
       } else {
         const result = await axios.post(
-          "http://localhost:3004/yoga/bookappointment",
+          "https://yogguru-backend.onrender.com/yoga/bookappointment",
           {
             Trainer: Trainer,
             AppointmentTime: AppointmentTime,

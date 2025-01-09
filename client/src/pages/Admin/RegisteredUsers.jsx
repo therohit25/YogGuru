@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Table from "../../Components/Table";
+import Table from "../../components/Table";
 
 const RegisteredUsers = () => {
   const [userData, setUserdata] = useState(null);
@@ -12,7 +12,9 @@ const RegisteredUsers = () => {
 
   const FetchUserData = async () => {
     try {
-      const result = await axios.get("http://localhost:3004/admin/getAllusers");
+      const result = await axios.get(
+        "https://yogguru-backend.onrender.com/admin/getAllusers"
+      );
 
       setUserdata(result.data);
       setDatedata([
@@ -49,9 +51,12 @@ const RegisteredUsers = () => {
 
   const DeleteUser = async (UserId) => {
     try {
-      await axios.delete("http://localhost:3004/admin/removeUser", {
-        data: { UserId: UserId },
-      });
+      await axios.delete(
+        "https://yogguru-backend.onrender.com/admin/removeUser",
+        {
+          data: { UserId: UserId },
+        }
+      );
 
       FetchUserData();
     } catch (error) {

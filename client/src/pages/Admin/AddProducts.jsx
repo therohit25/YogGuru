@@ -19,7 +19,10 @@ const AddProducts = () => {
     formdata.append("quantity", productData.quantity);
     formdata.append("image", productData.image);
     try {
-      await axios.post("http://localhost:3004/admin/addproducts", formdata);
+      await axios.post(
+        "https://yogguru-backend.onrender.com/admin/addproducts",
+        formdata
+      );
       alert("Product added Successfully!...");
       setProductData({
         name: "",

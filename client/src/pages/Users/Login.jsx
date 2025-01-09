@@ -13,7 +13,10 @@ const Login = () => {
   const navigate = useNavigate();
   const LoginSub = () => {
     axios
-      .post("http://localhost:3004/login", { email: email, password: password })
+      .post("https://yogguru-backend.onrender.com/login", {
+        email: email,
+        password: password,
+      })
       .then((res) => {
         if (res) {
           if (res.data.result.length > 0) {

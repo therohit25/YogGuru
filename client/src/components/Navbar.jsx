@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const logOut = () => {
     axios
-      .get("http://localhost:3004/logout")
+      .get("https://yogguru-backend.onrender.com/logout")
       .then((res) => {
         if (res.status === 200) {
           dispatch(logout());

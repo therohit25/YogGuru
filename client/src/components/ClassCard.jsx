@@ -16,7 +16,7 @@ const ClassCard = ({
         <div className="d-flex">
           <div className="w-100">
             <img
-              src="http://localhost:3004/images/profimg.png"
+              src="https://yogguru-backend.onrender.com/images/profimg.png"
               alt=""
               className="card-img-top"
             />

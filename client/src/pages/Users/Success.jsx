@@ -31,7 +31,7 @@ const Success = () => {
   useEffect(() => {
     if (TotalPrice > 0) {
       axios
-        .post("http://localhost:3004/user/order", {
+        .post("https://yogguru-backend.onrender.com/user/order", {
           TotalPrice: TotalPrice,
         })
         .then((res) => {

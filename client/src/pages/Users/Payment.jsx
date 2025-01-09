@@ -9,9 +9,12 @@ const Payment = () => {
   const makePayment = async () => {
     await loadStripe(import.meta.env.VITE_STRIPE_PAYMENT_URL);
     try {
-      await axios.post("http://localhost:3004/user/OnlineOrder", {
-        cart,
-      });
+      await axios.post(
+        "https://yogguru-backend.onrender.com/user/OnlineOrder",
+        {
+          cart,
+        }
+      );
     } catch (err) {
       console.error(`Error while making payment : ${err?.message}`);
     }

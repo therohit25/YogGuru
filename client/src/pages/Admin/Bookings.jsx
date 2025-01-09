@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Table from "../../Components/Table";
+import Table from "../../components/Table";
 import axios from "axios";
 import { useState } from "react";
 
@@ -10,7 +10,9 @@ const Bookings = () => {
   const [date, setDate] = useState(null);
   const FetchBookings = async () => {
     try {
-      const result = await axios.get("http://localhost:3004/yoga/getbookings");
+      const result = await axios.get(
+        "https://yogguru-backend.onrender.com/yoga/getbookings"
+      );
 
       let appointments = result?.data?.map((appointment) => {
         return appointment?.Trainee?.map((trainee) => {

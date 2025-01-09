@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import Table from "../../Components/Table";
+import Table from "../../components/Table";
 
 const AllOrders = () => {
   const [orderdata, setOrderdata] = useState(null);
@@ -13,7 +13,9 @@ const AllOrders = () => {
   const others = ["Pending", "Dispatched", "Delivered"];
   const FetAllOrders = async () => {
     try {
-      const result = await axios.get("http://localhost:3004/admin/AllOrders");
+      const result = await axios.get(
+        "https://yogguru-backend.onrender.com/admin/AllOrders"
+      );
 
       let newobj = result.data.map((order) => {
         // eslint-disable-next-line no-unused-vars
@@ -66,10 +68,13 @@ const AllOrders = () => {
   };
   const UpdateStatus = async (Status, OrderId) => {
     try {
-      await axios.put("http://localhost:3004/admin/updateStatus", {
-        OrderId: OrderId,
-        Status: Status,
-      });
+      await axios.put(
+        "https://yogguru-backend.onrender.com/admin/updateStatus",
+        {
+          OrderId: OrderId,
+          Status: Status,
+        }
+      );
       FetAllOrders();
     } catch (error) {
       console.error(`Error in Update Status : ${error?.message}`);
@@ -77,9 +82,12 @@ const AllOrders = () => {
   };
   const DeleteOrder = async (OrderId) => {
     try {
-      await axios.delete("http://localhost:3004/admin/removeOrder", {
-        data: { OrderId: OrderId },
-      });
+      await axios.delete(
+        "https://yogguru-backend.onrender.com/admin/removeOrder",
+        {
+          data: { OrderId: OrderId },
+        }
+      );
 
       FetAllOrders();
     } catch (error) {

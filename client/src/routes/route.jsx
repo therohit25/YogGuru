@@ -1,5 +1,5 @@
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 import Home from "../pages/Users/Home";
 import Contact from "../pages/Users/Contact";
@@ -23,7 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../features/LoginLogout/LoginLogout";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import LeftNavigation from "../Components/LeftNavigation";
+import LeftNavigation from "../components/LeftNavigation";
 import "../assets/css/admin.css";
 import AddProducts from "../pages/Admin/AddProducts";
 import AdminLogin from "../pages/Admin/AdminLogin";
@@ -34,7 +34,7 @@ import AllOrders from "../pages/Admin/AllOrders";
 import Parorder from "../pages/Admin/Parorder";
 import YogaAssistant from "../pages/Users/YogaAssistant";
 import Attendance from "../pages/Users/Attendance";
-import Form2 from "../Components/Form2";
+import Form2 from "../components/Form2";
 import { adminlogin } from "../features/LoginLogout/AdminLoginLogout";
 import AdminProtectedRoute from "./AdminProtectedRoute";
 import Dashboard from "../pages/Admin/Dashboard";
@@ -50,18 +50,22 @@ const NaviagationRoutes = () => {
   const admindetails = useSelector((state) => state.adminSlice.value);
 
   useEffect(() => {
-    axios.get("http://localhost:3004/auth/checklogin").then((res) => {
-      if (res) {
-        dispatch(login(res.data.user[0]));
-      }
-    });
+    axios
+      .get("https://yogguru-backend.onrender.com/auth/checklogin")
+      .then((res) => {
+        if (res) {
+          dispatch(login(res.data.user[0]));
+        }
+      });
   }, []);
   useEffect(() => {
-    axios.get("http://localhost:3004/auth/checkadminlogin").then((res) => {
-      if (res) {
-        dispatch(adminlogin(res.data.admin[0]));
-      }
-    });
+    axios
+      .get("https://yogguru-backend.onrender.com/auth/checkadminlogin")
+      .then((res) => {
+        if (res) {
+          dispatch(adminlogin(res.data.admin[0]));
+        }
+      });
   }, []);
 
   if (path.startsWith("/admin") || path.startsWith("/admin/")) {

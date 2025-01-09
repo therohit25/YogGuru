@@ -4,7 +4,7 @@ import YogaPhone from "../../assets/yogaphone.png";
 import YogaCart from "../../assets/yogacart.png";
 import { Link } from "react-router-dom";
 import "../../assets/css/home.css";
-import Features from "../../Components/Features";
+import Features from "../../components/Features";
 
 function Home() {
   return (

@@ -8,7 +8,9 @@ const FetchUsers = createAsyncThunk(
   "/RegisteredUsers/RegisteredUsers",
   async () => {
     try {
-      const result = await axios.get("http://localhost:3004/admin/getAllusers");
+      const result = await axios.get(
+        "https://yogguru-backend.onrender.com/admin/getAllusers"
+      );
 
       return result.data;
     } catch (error) {
@@ -21,7 +23,7 @@ const FetchUsers = createAsyncThunk(
 //   "/FetchOtherProducts/FetchOtherProducts",
 //   async () => {
 //     try {
-//       const result = await axios.get("http://localhost:3004/products");
+//       const result = await axios.get("https://yogguru-backend.onrender.com/products");
 //       return result.data;
 //     } catch (error) {
 //       throw new Error(error.message);

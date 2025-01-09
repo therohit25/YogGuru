@@ -1,5 +1,5 @@
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 import Home from "./Home";
 import Contact from "./Contact";
 import Product1 from "./Product1";
@@ -29,11 +29,13 @@ const User = () => {
   const userdetails = useSelector((state) => state.userSlice.value);
 
   useEffect(() => {
-    axios.get("http://localhost:3004/auth/checklogin").then((res) => {
-      if (res) {
-        dispatch(login(res.data.user[0]));
-      }
-    });
+    axios
+      .get("https://yogguru-backend.onrender.com/auth/checklogin")
+      .then((res) => {
+        if (res) {
+          dispatch(login(res.data.user[0]));
+        }
+      });
   }, []);
   return (
     <>

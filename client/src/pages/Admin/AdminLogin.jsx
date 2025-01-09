@@ -15,7 +15,7 @@ const AdminLogin = () => {
 
     try {
       const result = await axios.post(
-        "http://localhost:3004/admin/adminlogin",
+        "https://yogguru-backend.onrender.com/admin/adminlogin",
         adminCredentials
       );
 

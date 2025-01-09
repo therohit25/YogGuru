@@ -30,7 +30,7 @@ const OpenAIChat = () => {
         const response = await retry(
           async () => {
             const res = await axios.post(
-              "http://localhost:3004/yoga/yogaassistant",
+              "https://yogguru-backend.onrender.com/yoga/yogaassistant",
               { currentPayload: currentPayload }
             );
 

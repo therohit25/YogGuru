@@ -19,7 +19,7 @@ const Form2 = ({ uid }) => {
     formdata.append("specialization", specialization);
 
     axios
-      .put("http://localhost:3004/register", formdata)
+      .put("https://yogguru-backend.onrender.com/register", formdata)
       .then(() => {
         toast(" Registered Successfully Trainer!..!", {
           position: "top-right",

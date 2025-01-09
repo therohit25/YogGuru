@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Productlist from "../../Components/Productlist";
+import Productlist from "../../components/Productlist";
 import { addToCart } from "../../features/Cart/Cart";
 
 const Product2 = () => {
@@ -59,7 +59,7 @@ const Product2 = () => {
               <div className="prod-img h-100 w-100  text-center">
                 <div className="imgheight ">
                   <img
-                    src={`http://localhost:3004/images/${indproddet?.ProductImg}`}
+                    src={`https://yogguru-backend.onrender.com/images/${indproddet?.ProductImg}`}
                     alt="product"
                     className="rounded-1 h-100 w-100"
                     srcSet=""

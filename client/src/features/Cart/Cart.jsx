@@ -9,7 +9,9 @@ const initialState = {
 
 export const getCart = createAsyncThunk("/Cart/getCart", async () => {
   try {
-    const result = await axios.get("http://localhost:3004/user/carts/");
+    const result = await axios.get(
+      "https://yogguru-backend.onrender.com/user/carts/"
+    );
 
     return result.data.Productdata[0].Products;
   } catch (err) {
@@ -18,7 +20,7 @@ export const getCart = createAsyncThunk("/Cart/getCart", async () => {
 });
 export const emptyCart = createAsyncThunk("/Cart/emptyCart", async () => {
   try {
-    await axios.delete("http://localhost:3004/user/emptycart");
+    await axios.delete("https://yogguru-backend.onrender.com/user/emptycart");
     return [];
   } catch (err) {
     throw new Error("Error in EmptyingCart");
@@ -30,7 +32,7 @@ export const addToCart = createAsyncThunk(
   async (product) => {
     try {
       const result = await axios.post(
-        `http://localhost:3004/user/insertcart/`,
+        `https://yogguru-backend.onrender.com/user/insertcart/`,
         product
       );
       if (result.status === 200) {
@@ -46,7 +48,7 @@ export const removeFromCart = createAsyncThunk(
   async (ProductId) => {
     try {
       const result = await axios.delete(
-        "http://localhost:3004/user/removeproduct",
+        "https://yogguru-backend.onrender.com/user/removeproduct",
         {
           data: { ProductId: ProductId },
         }
@@ -63,7 +65,7 @@ export const updateFromCart = createAsyncThunk(
   "/Cart/updateFromCart",
   async ({ ProductId, Quantity }) => {
     try {
-      await axios.put("http://localhost:3004/user/updatecart", {
+      await axios.put("https://yogguru-backend.onrender.com/user/updatecart", {
         ProductId: ProductId,
         Quantity: Quantity,
       });

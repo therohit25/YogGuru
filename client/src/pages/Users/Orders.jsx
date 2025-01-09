@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import OrderCard from "../../Components/OrderCard";
+import OrderCard from "../../components/OrderCard";
 import { SyncLoader } from "react-spinners";
 
 function Orders() {
@@ -9,7 +9,7 @@ function Orders() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3004/user/myorders")
+      .get("https://yogguru-backend.onrender.com/user/myorders")
       .then((res) => {
         if (res) {
           setLoading(true);

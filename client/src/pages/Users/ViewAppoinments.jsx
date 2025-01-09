@@ -1,5 +1,5 @@
 import axios from "axios";
-import ClassCard from "../../Components/ClassCard";
+import ClassCard from "../../components/ClassCard";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
@@ -16,11 +16,14 @@ const ViewAppoinments = () => {
 
   const UpdateAttendance = async (attendance, _id, id) => {
     try {
-      await axios.put("http://localhost:3004/yoga/updateattendance", {
-        attendance: attendance,
-        _id: _id,
-        id: id,
-      });
+      await axios.put(
+        "https://yogguru-backend.onrender.com/yoga/updateattendance",
+        {
+          attendance: attendance,
+          _id: _id,
+          id: id,
+        }
+      );
 
       toast("Attendance changed to " + attendance, {
         position: "top-right",
@@ -52,10 +55,12 @@ const ViewAppoinments = () => {
     try {
       let result = "";
       if (userdetails?.Role === "Trainee") {
-        result = await axios.get("http://localhost:3004/yoga/getappointments");
+        result = await axios.get(
+          "https://yogguru-backend.onrender.com/yoga/getappointments"
+        );
       } else {
         result = await axios.get(
-          "http://localhost:3004/yoga/getappointmentsTrainer"
+          "https://yogguru-backend.onrender.com/yoga/getappointmentsTrainer"
         );
       }
 

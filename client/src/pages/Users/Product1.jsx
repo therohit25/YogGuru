@@ -1,6 +1,6 @@
 import "../../assets/css/product1.css";
 import { useEffect, useState } from "react";
-import Productlist from "../../Components/Productlist";
+import Productlist from "../../components/Productlist";
 import { useDispatch, useSelector } from "react-redux";
 import { FetchProductDet } from "../../features/Product/Products";
 import { SyncLoader } from "react-spinners";

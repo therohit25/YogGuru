@@ -6,7 +6,7 @@ const Attendance = () => {
   useEffect(() => {
     (async () => {
       await axios.get(
-        `http://localhost:3004/yoga/updateattendanceWithQR/${Trainee}`
+        `https://yogguru-backend.onrender.com/yoga/updateattendanceWithQR/${Trainee}`
       );
       alert("Attedance Noted Successfully");
     })();
