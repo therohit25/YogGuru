@@ -21,7 +21,7 @@ const port = process.env.PORT || 3004;
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URI],
+    origin: [process.env.FRONTEND_URI, "http://localhost:5173"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
